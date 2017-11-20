@@ -1,0 +1,11 @@
+{
+  "landingPage": {
+    "header": "React Redux Webpack Sample Application",
+    "subHeader": "Sample UI Components",
+    "button": {
+      "primary": "Primary Button",
+      "secondary": "Secondary Button"
+    },
+    "routeHeader": "Read me and Examples"
+  }
+}

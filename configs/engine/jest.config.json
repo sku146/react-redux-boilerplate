@@ -1,0 +1,69 @@
+{
+  "rootDir": "../../",
+  "roots": [
+    "<rootDir>/specs/"
+  ],
+  "verbose": true,
+  "collectCoverage": true,
+  "coverageDirectory": "<rootDir>/dashboard/unit-testing",
+  "coverageReporters": [
+    "json",
+    "lcov",
+    "text",
+    "text-summary"
+  ],
+  "collectCoverageFrom": [
+    "src/**",
+    "!**/index.js",
+    "!**/app.mount.jsx",
+    "!**/appJourney.root.jsx",
+    "!**/postcss.config.js"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/dist/",
+    "/dist-release/",
+    "src/store/",
+    "src/journeys/remortgage/routes/",
+    "src/constants/env-config.js"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 95,
+      "functions": 95,
+      "lines": 95,
+      "statements": 95
+    }
+  },
+  "globals": {
+    "webpack": {
+      "title": "Sample React Redux Webpack Application",
+      "brandName": "",
+      "basePath": "/",
+      "brandHome": "http://localhost:9001/",
+      "brandPrivacy": "http://localhost:9001/"
+    }
+  },
+  "moduleFileExtensions": [
+    "js",
+    "jsx"
+  ],
+  "moduleNameMapper": {
+    "^actions(.*)$": "<rootDir>/src/actions$1",
+    "^assets(.*)$": "<rootDir>/src/assets$1",
+    "^constants(.*)$": "<rootDir>/src/constants$1",
+    "^components(.*)$": "<rootDir>/src/components$1",
+    "^containers(.*)$": "<rootDir>/src/containers$1",
+    "^journeys(.*)$": "<rootDir>/src/journeys$1",
+    "^reducers(.*)$": "<rootDir>/src/reducers$1",
+    "^store(.*)$": "<rootDir>/src/store$1",
+    "^copies(.*)$": "<rootDir>/src/copies$1",
+    "^styles(.*)$": "<rootDir>/src/styles$1",
+    "^services(.*)$": "<rootDir>/src/services$1",
+    "^utils(.*)$": "<rootDir>/src/utils$1",
+    "^middleware(.*)$": "<rootDir>/src/middleware$1",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/resourceMock.js"
+  },
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/enzyme-to-json/serializer"
+  ]
+}

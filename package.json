@@ -1,0 +1,72 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple React Redux Sample Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "engine --server",
+    "release": "engine --build production",
+    "lint": "engine --lint",
+    "lint:report": "engine -r",
+    "test:watch": "engine --test watch",
+    "test:watchAll": "engine --test watchAll",
+    "test:unit": "engine --test",
+    "doc": "engine --doc",
+    "check": "npm-check -u",
+    "test": "engine -l -r -t",
+    "mock:start": "engine --mockServer",
+    "mock:watch": "engine --mockServer watch",
+    "mock:db-watch": "json-server --watch configs/engine/mock-server/db.json",
+    "scout": "engine --build production -c appJourney"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack",
+    "Boilerplate",
+    "Application"
+  ],
+  "precommit": [
+    "test"
+  ],
+  "author": {
+    "name": "SAPIENT",
+    "email": "skumar146@sapient.com"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "guid": "0.0.12",
+    "history": "^4.7.2",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.1",
+    "redux-actions": "^2.2.1",
+    "redux-api-middleware": "^1.0.3",
+    "redux-form": "^7.0.3",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.74.2",
+    "sxt-ui-library": "^1.0.0"
+  },
+  "devDependencies": {
+    "app-build-engine": "^1.0.4",
+    "autoprefixer": "^7.1.2",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
+    "react-router-test-context": "^0.1.0",
+    "react-test-renderer": "^15.6.1",
+    "nock": "^9.0.14",
+    "redux-mock-store": "^1.3.0"
+  }
+}

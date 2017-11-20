@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing Page Component render component should render as expected 1`] = `
+<div
+  className="landing-page"
+>
+  <h1
+    className="ui header"
+    data-bdd-selector="landingHeader"
+  >
+    React Redux Webpack Sample Application
+  </h1>
+  <div
+    className="ui segment"
+  >
+    <h2
+      className="ui header"
+      data-bdd-selector="subHeader"
+    >
+      Sample UI Components
+    </h2>
+    <button
+      className="ui primary button"
+      data-bdd-selector="primaryButton"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      Primary Button
+    </button>
+    <button
+      className="ui secondary button"
+      data-bdd-selector="secondaryButton"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      Secondary Button
+    </button>
+  </div>
+  <h2
+    className="ui header"
+    data-bdd-selector="routeHeader"
+  >
+    Read me and Examples
+  </h2>
+  <div
+    className="ui list"
+    role="list"
+  >
+    <div
+      className="item"
+      data-value={undefined}
+      onClick={[Function]}
+      role="listitem"
+    >
+      test
+    </div>
+    <div
+      className="item"
+      data-value={undefined}
+      onClick={[Function]}
+      role="listitem"
+    >
+      test1
+    </div>
+    <div
+      className="item"
+      data-value={undefined}
+      onClick={[Function]}
+      role="listitem"
+    >
+      test2
+    </div>
+  </div>
+</div>
+`;

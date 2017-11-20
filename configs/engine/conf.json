@@ -1,0 +1,31 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "source": {
+    "include": [
+      "../../src/"
+    ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": [],
+  "opts": {
+    "template": "node_modules/ink-docstrap/template",
+    "encoding": "utf8",
+    "destination": "../../docs/",
+    "recurse": true
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    },
+    "systemName": "Sample React Redux Webpack Application",
+    "theme": "paper",
+    "linenums": true,
+    "collapseSymbols": false,
+    "inverseNav": true
+  }
+}
