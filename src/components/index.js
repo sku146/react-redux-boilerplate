@@ -1,8 +1,8 @@
 // @flow
-import LandingPageComponent from './module/landing-page';
+import LandingPage from './module/landing-page';
 
 export {
-  LandingPageComponent,
+  LandingPage,
 };
 
 export default {};

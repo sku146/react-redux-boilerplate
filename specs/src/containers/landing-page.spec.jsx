@@ -4,7 +4,7 @@ import LandingPage from 'containers/landing-page';
 import configureMockStore from 'redux-mock-store';
 import createRouterContext from 'react-router-test-context';
 
-describe("Landing Page", () => {
+describe('Landing Page', () => {
   const createMockStore = configureMockStore();
   const state = {
     application: {
@@ -14,11 +14,13 @@ describe("Landing Page", () => {
   const ShallowComponent = () => {
     const store = createMockStore(state);
     const context = createRouterContext();
-    return shallow(<LandingPage store={store}/>).shallow({context}).shallow();
+    return shallow(<LandingPage store={store}/>).shallow({ context }).shallow();
   };
 
-  it('component should render as expected', ()=> {
-    const component = ShallowComponent();
-    expect(component.find('LandingPage')).toHaveLength(1);
+  describe('render', () => {
+    it('component should render a LandingPage component', ()=> {
+      const component = ShallowComponent();
+      expect(component.find('LandingPageComponent')).toHaveLength(1);
+    });
   });
 });

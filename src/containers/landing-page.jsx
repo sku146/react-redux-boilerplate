@@ -4,10 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ApplicationActions } from 'actions';
 import {
-  ApplicationServices,
-} from 'services';
-import {
-  LandingPageComponent,
+  LandingPage,
 } from 'components';
 
 const mapStateToProps = state => ({
@@ -17,10 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   actions: {
     application: bindActionCreators(ApplicationActions, dispatch),
-  },
-  apiActions: {
-    exampleList: bindActionCreators(ApplicationServices, dispatch),
-  },
+  }
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LandingPageComponent));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LandingPage));

@@ -15,7 +15,8 @@
     }
   },
   "plugins": [
-    "transform-flow-comments"
+    "transform-flow-comments",
+    "transform-flow-strip-types"
   ]
 }
 
