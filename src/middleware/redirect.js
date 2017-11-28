@@ -1,4 +1,7 @@
-export default history => () => next => (action) => {
+// @flow
+import { Types } from 'constants';
+
+export default (history: Types.History) => () => (next: Types.Next) => (action: Types.Action) => {
   const { payload, meta } = action;
   const result = next(action);
 

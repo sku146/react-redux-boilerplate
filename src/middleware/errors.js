@@ -1,7 +1,8 @@
+// @flow
 /* eslint-disable default-case */
-import { ActionTypes } from 'constants';
+import { Types, ActionTypes } from 'constants';
 
-export default () => next => (action) => {
+export default () => (next: Types.Next) => (action: Types.Action) => {
   const { payload } = action;
 
   if (action.error) {

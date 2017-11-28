@@ -1,3 +1,4 @@
+// @flow
 /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import isEmpty from 'lodash/isEmpty';
 import result from 'lodash/result';
@@ -23,14 +24,22 @@ import template from 'lodash/template';
  * {CopyProvider.getCopy('help.callUS', {}, 'lower')}
  */
 
+type Resources = {
+  lang?: string,
+};
+
 class CopyProvider {
-  constructor(lang = 'en-GB', resources = {}, resourceType = 'nested') {
+  resources: {};
+  lang: string;
+  resourceType: string;
+
+  constructor(lang: string = 'en-GB', resources: Resources = {}, resourceType: string = 'nested') {
     this.resources = resources[lang];
     this.lang = lang;
     this.resourceType = resourceType;
   }
 
-  static getValue(locals = {}, tKey = '', resourceType = 'nested') {
+  static getValue(locals: {} = {}, tKey: string = '', resourceType: string = 'nested') {
     if (!isEmpty(locals) && !isEmpty(tKey)) {
       if (resourceType === 'nested') {
         return result(locals, tKey, tKey);
@@ -49,7 +58,7 @@ class CopyProvider {
     return this.lang;
   }
 
-  static transform(transform = '', resource = '') {
+  static transform(transform: string = '', resource: string = '') {
     if (isEmpty(resource)) {
       return resource;
     }
@@ -64,7 +73,7 @@ class CopyProvider {
     }
   }
 
-  getCopy(tKey = '', attr = {}, transform = '') {
+  getCopy(tKey: string = '', attr: {} = {}, transform: string = '') {
     let keyValue = CopyProvider.getValue(this.resources, tKey, this.resourceType);
     if (!isEmpty(attr)) {
       keyValue = template(keyValue)(attr);

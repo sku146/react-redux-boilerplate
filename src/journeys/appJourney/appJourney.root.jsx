@@ -1,10 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import configStore from 'store';
-import RouteCollection from 'journeys/appJourney/routes';
+import RouteCollection from './routes';
 import history from './history';
+import rootSaga from 'sagas';
 
-const store = configStore(history);
+const debug = process.env.NODE_ENV === 'development';
+const store = configStore(history, debug);
+store.runSaga(rootSaga);
 
 const Root = () => (
   <Provider store={store} key="provider">

@@ -1,5 +1,8 @@
 {
-  "presets": ["build-engine/reactWebpack"],
+  "presets": [
+    "build-engine/reactWebpack",
+    "flow"
+  ],
   "env": {
     "compile": {
       "presets": ["build-engine"]
@@ -12,24 +15,7 @@
     }
   },
   "plugins": [
-    ["module-resolver", {
-      "root": ["./src"],
-      "alias": {
-        "^actions(.*)$": "<rootDir>/src/actions$1",
-        "^assets(.*)$": "<rootDir>/src/assets$1",
-        "^constants(.*)$": "<rootDir>/src/constants$1",
-        "^containers(.*)$": "<rootDir>/src/containers$1",
-        "^components(.*)$": "<rootDir>/src/components$1",
-        "^journeys(.*)$": "<rootDir>/src/journeys$1",
-        "^copies(.*)$": "<rootDir>/src/copies$1",
-        "^reducers(.*)$": "<rootDir>/src/reducers$1",
-        "^store(.*)$": "<rootDir>/src/store$1",
-        "^styles(.*)$": "<rootDir>/src/styles$1",
-        "^services(.*)$": "<rootDir>/src/services$1",
-        "^utils(.*)$": "<rootDir>/src/utils$1",
-        "^middleware(.*)$": "<rootDir>/src/middleware$1"
-      }
-    }]
-  ],
+    "transform-flow-comments"
+  ]
 }
 

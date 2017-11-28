@@ -1,3 +1,4 @@
+// @flow
 import redirect from './redirect';
 import systemExceptionHandler from './errors';
 

@@ -1,5 +1,5 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {
   Header,
   Segment,
@@ -9,10 +9,24 @@ import {
 import map from 'lodash/map';
 import { getResource } from 'copies/appJourney';
 
-class LandingPage extends Component {
+type Props = {
+  actions: {
+    application: {
+      applicationStarted: () => void,
+      exampleListRequest: () => void,
+    },
+  },
+  exampleList?: [],
+};
+
+class LandingPage extends Component<Props> {
+  static defaultProps = {
+    exampleList: [],
+  };
+
   componentDidMount() {
     this.props.actions.application.applicationStarted();
-    this.props.apiActions.exampleList.fetchExampleList();
+    this.props.actions.application.exampleListRequest();
   }
 
   render() {
@@ -40,17 +54,5 @@ class LandingPage extends Component {
     );
   }
 }
-
-LandingPage.propTypes = {
-  actions: PropTypes.object,
-  apiActions: PropTypes.object,
-  exampleList: PropTypes.array,
-};
-
-LandingPage.defaultProps = {
-  actions: {},
-  apiActions: {},
-  exampleList: [],
-};
 
 export default LandingPage;

@@ -1,3 +1,4 @@
+// @flow
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
 import application from './application';

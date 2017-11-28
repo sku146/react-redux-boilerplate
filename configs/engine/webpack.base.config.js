@@ -23,6 +23,7 @@ export default {
       services: sysPath.resolve(`${process.cwd()}`, 'src/services'),
       utils: sysPath.resolve(`${process.cwd()}`, 'src/utils'),
       middleware: sysPath.resolve(`${process.cwd()}`, 'src/middleware'),
+      sagas: sysPath.resolve(`${process.cwd()}`, 'src/sagas'),
     },
   },
   module: {

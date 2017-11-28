@@ -1,26 +1,27 @@
+// @flow
 import { handleActions } from 'redux-actions';
 import assignIn from 'lodash/assignIn';
-import initialState from 'store/initialState';
 import {
   ApplicationActions,
 } from 'actions';
 import {
   UIConstants,
+  Types,
 } from 'constants';
 
 export default handleActions({
-  [ApplicationActions.applicationStarted]: state => (assignIn({}, state, {
+  [ApplicationActions.applicationStarted]: (state: Types.State) => (assignIn({}, state, {
     applicationId: UIConstants.applicationIdRandomNo,
   })),
-  [ApplicationActions.exampleListRequest]: (state, action) => assignIn({}, state, {
+  [ApplicationActions.exampleListRequest]: (state: Types.State, action: Types.Action) => assignIn({}, state, {
     isFetching: !action.error,
   }),
-  [ApplicationActions.exampleListResponse]: (state, action) => assignIn({}, state, {
+  [ApplicationActions.exampleListResponse]: (state: Types.State, action: Types.Action) => assignIn({}, state, {
     isFetching: false,
     exampleList: action.payload,
   }),
-  [ApplicationActions.exampleListFailure]: state => assignIn({}, state, {
+  [ApplicationActions.exampleListFailure]: (state: Types.State) => assignIn({}, state, {
     isFetching: false,
     exampleList: [],
   }),
-}, initialState.application);
+}, {});

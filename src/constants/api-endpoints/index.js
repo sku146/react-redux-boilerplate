@@ -1,3 +1,4 @@
+// @flow
 import envConfig from 'constants/env-config';
 
 const API = envConfig.api;
